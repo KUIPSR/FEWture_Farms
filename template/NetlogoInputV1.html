@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+  <meta charset="UTF-8">
+  <title>Netlogo Simulation</title>
+  <link rel="icon" href="/static/img/Farm-Features.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='NetlogoInputV1.css') }}">
+  <style>
+    /* Center loader */
+    .loader {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      display: none;
+    }
+  
+    /* Blur the page */
+    .blur {
+      filter: blur(5px); /* Adjust the blur amount as needed */
+      pointer-events: none;
+    }
+
+  </style>
+
+</head>
+<body>
+    
+    <div id="loader" class="loader"></div>
+<section class="faq">
+    
+        <div class="container">
+            <a href="/" class="back-link homepage-link">Homepage</a>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8 text-center">
+                    <div class="section-title">
+                        
+                        <h1>Farm FEWtures NetLogo Simulation</h1>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                Form related to Agriculture
+                                            </button>
+                                        </h5>
+                                    </div>
+    
+                                    <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+											<div class="form-container">
+												<a href="/" class="back-link"></a>
+												<form action="/calculate" method="POST" id="AgricultureForm">
+													<label for="corn_area">Corn Area:</label>
+													<input type="number" id="corn_area" name="corn_area" value="200">
+													<br>
+										
+													<label for="wheat_area">Wheat Area:</label>
+													<input type="number" id="wheat_area" name="wheat_area" value="125">
+													<br>
+										
+													<label for="soybeans_area">Soybeans Area:</label>
+													<input type="number" id="soybeans_area" name="soybeans_area" value="0">
+													<br>
+										
+													<label for="sg_area">SG Area:</label>
+													<input type="number" id="sg_area" name="sg_area" value="125">
+													<br>
+												</form>
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												Form related to Energy
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+											<div class="form-container">
+												<a href="/" class="back-link"></a>
+												<form action="/calculate" method="POST" id="EnergyForm">
+													<label for="energy_value">Energy Value:</label>
+													<input type="number" id="energy_value" name="energy_value" value="29">
+													<br>
+										
+													<label for="loan_term">Loan Term:</label>
+													<input type="number" id="loan_term" name="loan_term" value="1">
+													<br>
+										
+													<label for="interest">Interest:</label>
+													<input type="number" id="interest" name="interest" value="2">
+													<br>
+										
+													<label for="num_wind_turbines">Number of Wind Turbines:</label>
+													<input type="number" id="num_wind_turbines" name="num_wind_turbines" value="2">
+													<br>
+										
+													<label for="nyear_w">Number of years (Wind):</label>
+													<input type="number" id="nyear_w" name="nyear_w" value="30">
+													<br>
+										
+													<label for="capacity_w">Capacity (Wind):</label>
+													<input type="number" id="capacity_w" name="capacity_w" value="2">
+													<br>
+										
+													<label for="cost_w">Cost (Wind):</label>
+													<input type="number" id="cost_w" name="cost_w" value="1470">
+													<br>
+										
+													<label for="degrade_w">Degrade (Wind):</label>
+													<input type="number" id="degrade_w" name="degrade_w" value="1">
+													<br>
+										
+													<label for="wind_factor">Wind Factor:</label>
+													<input type="number" id="wind_factor" name="wind_factor" value="42">
+													<br>
+										
+													<label for="num_panel_sets">Number of Panel Sets:</label>
+													<input type="number" id="num_panel_sets" name="num_panel_sets" value="3">
+													<br>   
+										
+													<label for="nyear_s">Number of years (Solar):</label>
+													<input type="number" id="nyear_s" name="nyear_s" value="25">
+													<br> 
+										
+													<label for="cost_s">Cost (Solar):</label>
+													<input type="number" id="cost_s" name="cost_s" value="1750">
+													<br> 
+										
+													<label for="capacity_s">Capacity (Solar):</label>
+													<input type="number" id="capacity_s" name="capacity_s" value="250">
+													<br> 
+										
+													<label for="degrade_s">Degrade (Solar):</label>
+													<input type="number" id="degrade_s" name="degrade_s" value="1">
+													<br>
+										
+													<label for="sun_hrs">Sun Hours:</label>
+													<input type="number" id="sun_hrs" name="sun_hrs" value="6">
+													<br>
+													
+													<label for="ptc_w">PTC (Wind):</label>
+													<input type="number" id="ptc_w" name="ptc_w" value="0">
+													<br>
+										
+													<label for="itc_s">ITC (Solar):</label>
+													<input type="number" id="itc_s" name="itc_s" value="0">
+													<br>
+										
+													<label for="ptc_s">PTC (Solar):</label>
+													<input type="number" id="ptc_s" name="ptc_s" value="0">
+													<br>
+										
+										
+													<!-- <input type="submit" value="Calculate"> -->
+												</form>
+											</div>                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Form related to Climate
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="form-container">
+                                                <form action="/calculate" method="post" id="climateForm">
+                                                    <label for="future_processes">Future Process:</label>
+                                                    <select id="future_processes" name="future_processes">
+                                                        <option value="Repeat Historical">Repeat Historical</option>
+                                                        <option value="Wetter Future">Wetter Future</option>
+                                                        <option value="Dryer Future">Dryer Future</option>
+                                                        <option value="GCM">GCM</option>
+                                                    </select>
+                                                    <br>
+                                        
+                                                    <label for="climate_model">Climate Model:</label>
+                                                    <select id="climate_model" name="climate_model">
+                                                        <option value="RCP4.5">RCP4.5</option>
+                                                        <option value="RCP8.5">RCP8.5</option>
+                                                    </select>
+                                                    <br>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                                Where can I get some?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse4" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+    
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse5" aria-expanded="false" aria-controls="collapseOne">
+												Form related to Water
+                                            </button>
+                                        </h5>
+                                    </div>
+    
+                                    <div id="collapse5" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+											<div class="form-container">
+												<a href="/" class="back-link"></a>
+												<form action="/calculate" method="POST" id="IrrigationForm">
+													<label for="aquifier_level">Aquifier Level:</label>
+													<input type="number" id="aquifier_level" name="aquifier_level" value="200">
+													<br>
+										
+													<label for="min_aquifier_level">Min. Aquifier Level:</label>
+													<input type="number" id="min_aquifier_level" name="min_aquifier_level" value="125">
+													<br>
+													<!-- <input type="submit" value="Calculate"> -->
+												</form>
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
+                                                Form Related To Ammonia (NH3)
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse6" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+											<div class="form-container">
+												<a href="/" class="back-link"></a>
+                                                <form action="/download-csv" method="GET" id="DownloadAmmoniaCSV">
+                                                    <input type="submit" value="Download CSV" id="download-button">
+                                                </form>
+											</div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                                                Choose the number of years.
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse7" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="form-container">
+												<a href="/" class="back-link"></a>
+												<form action="/calculate" method="POST" id="NumberOfYears"></form>
+                                                    <label for="input_start_of_years">Enter Start Year:</label>
+                                                    <input type = "number" id="input_start_of_years" name="input_start_of_years">
+													<label for="num_of_years">Number of Years:</label>
+													<input type="range" id="num_of_years" name="num_of_years" min="0" max="100" value="60">
+													<br>
+													<span id="slider-value">60</span>
+										
+													<br>
+										
+													<input type="submit" value="Calculate" id="calculate-button">
+												</form>
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse8" aria-expanded="false" aria-controls="collapseThree">
+                                                Where can I get some?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse8" class="collapse" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            
+                                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
+                                        </div>
+                                    </div>
+                                </div> -->
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <iframe src="/ChartWindow" width="100%" height="900" frameborder="0"></iframe>
+  <script src='https://code.jquery.com/jquery-2.1.0.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src="{{ url_for('static', filename='NetlogoInputV1.js') }}"></script>
+</body>
+</html>

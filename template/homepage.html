@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Overview | FEWture Farms</title>
+  <link rel="icon" href="/static/img/Farm-Features.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage.css') }}">
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="head">
+    <h1>FEWture Farms</h1>
+  </div>
+  <div class="nav">
+    <a href="/" ><strong>Home</strong></a>
+    <a href="/NetlogoInputV1" target="_blank"><strong>Click Here to View NetLogo Simulation</strong></a>
+  </div>
+</nav>
+
+<!-- -----------   MAİN   -----------  -->
+<!-- İNFO CARD -->
+<div class="info-card">
+  <div class="info-text-ctn">
+    <div class="info-head">
+      <h1>FEWtures and FEWture Farms</h1>
+    </div>
+    <div class="info-text">
+      <p>
+        <strong>FEWtures</strong> is a National Science Foundation Project focused on attaining prosperous farms and agricultural communities by taking advantage of local renewable energy. The project explored the science, engineering, economics, and sociology of local use of that energy to produce small-scale local ammonia for fertilizer and treat local water that is unusable without treatment. Find out more here:
+        <a href="https://ipsr.ku.edu/FEWtures/">https://ipsr.ku.edu/FEWtures/</a>
+        <br>
+        FEWture Farm is an online application that gives students and others interested in rural food-energy-water system interactions access to what was discovered as part of the FEWtures project. In the application, you, the user, can define choices about farm agriculture, energy, water, fertilizer, and water treatment, and find out if your choices are likely to make money given different user-selected options about weather in the coming decades. You can choose how many acres to plant with a selected set of crops. You can decide whether to add a wind turbine or solar panels. You can decide whether to install an ammonia production facility and whether to have a mobile water treatment truck come by and operate on your farm for a while. You can define the saturated thickness of your aquifer. Will you make money? Come and find out!
+    </p>
+        
+    </div>
+    <div class="info-buton">
+    </div>
+    <!-- <div class="info-buton">
+      <button>Learn More</button>
+    </div> -->
+  </div>
+  <div class="info-image">
+   <a href="/"><img src="/static/img/Farm Features.JPG" alt="Farm Features"></a> 
+  </div>
+</div>
+
+<div class="info-card1">
+  <div class="info-text-ctn">
+    <div class="info-head">
+      <h1>Agriculture</h1>
+    </div>
+    <div class="info-text">
+      <p><strong>In FEWture Farm,</strong> the crops and acreage are chosen by the user. The amount of fertilizer and water used, and the amount of crop produced based on defined weather conditions are calculated. How? Using the US Department of Agriculture computer program DSSAT. The weather condition information is either historical or a user-chosen projection of climate in coming decades. <br>This use of DSSAT can be very good for users who are unfamiliar with farming and will learn something based on generalized simulation of the farming process.<br>This use of DSSAT can be very frustrating for farmers who know their land and operations better than a generalized program like DSSAT. Those users can access the discoveries of the FEWtures project using FEWture Resilience, another online application designed for just such users.
+      </p>    
+    </div>
+    <div class="info-buton">
+    </div>
+  </div>
+  <div class="info-image1">
+    <a href="/NetlogoInputV1"><img src="/static/img/Agriculture.jpg" alt="Energy"></a>
+  </div>
+</div>
+
+<div class="info-card2">
+  <div class="info-text-ctn">
+    <div class="info-head">
+      <h1>Energy</h1>
+    </div>
+    <div class="info-text">
+      <p><strong>In FEWture Farm,</strong> he user can select how many wind turbines and solar panels to add to their farm. Additional data needs can be fulfilled using default values or determined by the user with sliders that restrict their choices to reasonable ranges
+      </p>
+    </div>
+    <div class="info-buton">
+    </div>
+  </div>
+  <div class="info-image2">
+   <a href="/NetlogoInputV1"> <img src="/static/img/Energy.jpg" alt="Energy"> </a>
+  </div>
+</div>
+
+<div class="info-card3">
+  <div class="info-text-ctn">
+    <div class="info-head">
+      <h1>Water</h1>
+    </div>
+    <div class="info-text">
+      <p><strong>In FEWture Farm,</strong> users can use groundwater, surface water, or treated water. <br>To use groundwater, users provide information about the thickness of their groundwater system. Their location can be used to determine a Water-Balance method that approximates how much groundwater levels will change given water demands determined by DSSAT (see the Agriculture box) and the annual precipitation and temperature.<br>To use surface water, users provide information about their location relative to nearby rivers.<br>To use treated water, users provide information about local sources of treatable water.
+      </p>
+    </div>
+    <div class="info-buton">
+    </div>
+  </div>
+  <div class="info-image">
+   <a href="/NetlogoInputV1"> <img src="/static/img/Water.jpg" alt="Water"> </a>
+  </div>
+</div>
+
+<div class="info-card4">
+  <div class="info-text-ctn">
+    <div class="info-head">
+      <h1>Ammonia</h1>
+    </div>
+    <div class="info-text">
+      <p>The ammonia production costs are calculated using a separate Excel file and entering selected information into the FEWture Farm Ammonia template. Small scale ammonia plants (less than 10 tonnes per day production) are rarely likely to be economically viable using currently available numbers, but the Excel file allows users to estimate these costs. </p>    
+    </div>
+    <div class="info-buton">
+    </div>
+  </div>
+  <div class="info-image3">
+    <a href="/NetlogoInputV1"><img src="/static/img/Ammonia.jpg" alt="Ammonia"></a>
+  </div>
+</div>  
+</body>
+</html>

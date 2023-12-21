@@ -1,0 +1,135 @@
+/* Reset some default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the form container */
+.form-container {
+    background-color: #fff;
+    padding: 10px; /* Reduce padding for a smaller container */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Set your desired width */
+    margin: 20px auto; /* Center the container horizontally */
+}
+
+/* Style form labels and inputs */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px; /* Add some spacing from the form */
+    font-weight: bold;
+}
+
+form input[type="number"] {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="range"] {
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+/* Style the slider value span */
+#slider-value {
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Center the Calculate button horizontally */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block; /* Make it a block-level element */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Style the chart containers */
+.chart-container, .chart-container1 {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    overflow: auto; 
+}
+
+.chart {
+    width: 100%;
+    height: 100%; 
+}
+
+
+/* .chart-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+} */
+
+.chart-title-box {
+    text-align: center;
+    background-color: #d59999; /* Set the background color for the box */
+    padding: 10px; /* Add some padding around the box */
+}
+
+.chart-title {
+    font-size: 24px;
+    margin: 0; /* Remove margin from the h1 element to ensure it's centered within the box */
+}
+
+
+/* Style the "Back to Homepage" link */
+a.back-link {
+    display: inline-block;
+    padding: 10px; /* Adjust padding for a smaller circle */
+    margin-bottom: 10px;
+    background-color: #001dff;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Make it a circle */
+    text-decoration: none;
+    width: 20px; /* Set the width and height for the circle */
+    height: 20px;
+    text-align: center;
+    line-height: 19px;
+}
+
+a.back-link::before {
+    content: "\2190"; /* Unicode character for a left arrow */
+    font-weight: 900; /* Increase font weight for a bolder arrow */
+}
+
+
+/* CSS for the "Download" button */
+.download-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    font-size: 16px; /* Set the font size */
+    float: right; /* Move the button to the right */
+}
+
+.download-button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+

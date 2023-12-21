@@ -1,0 +1,272 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #ff008b;
+}
+section {
+    padding: 60px;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.faq {
+    padding: 120px 0 90px;
+    background: #f7fbff;
+}
+
+.faq .section-title {
+    margin-bottom: 54px;
+}
+
+.faq .section-title h2 {
+    margin-bottom: 22px;
+}
+
+.faq .accordion .card {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.faq .accordion .card:not(:first-of-type) .card-header:first-child {
+    border-radius: 10px;
+}
+
+.faq .accordion .card .card-header {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.faq .accordion .card .card-header h5 {
+    padding: 0;
+}
+
+.faq .accordion .card .card-header h5 button {
+    color: #1e3056;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 30px 0 70px;
+    height: 80px;
+    display: block;
+    width: 100%;
+    color: rgba(30, 48, 86, 0.8);
+    text-align: left;
+    background: #fff;
+    -webkit-box-shadow: 0px -50px 140px 0px rgba(69, 81, 100, 0.1);
+    box-shadow: 0px -50px 140px 0px rgba(69, 81, 100, 0.1);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.faq .accordion .card .card-header h5 button:after {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    color: #ff5f74;
+    text-align: center;
+    border: 1px solid #ff5f74;
+    border-radius: 50%;
+    line-height: 100%;
+    content: '\f067';
+    font-size: 10px;
+    line-height: 18px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.faq .accordion .card .card-header h5 button.collapsed {
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(97, 125, 255, 0.2);
+}
+
+.faq .accordion .card .card-header h5 button[aria-expanded="true"]:after {
+    content: '\f068';
+    color: #fff;
+    background-image: -webkit-linear-gradient(-180deg, #5e7eff 0%, #ff5f74 30%, #a85fff 100%);
+}
+
+.faq .accordion .card .card-body {
+    -webkit-box-shadow: 0px 15px 140px 0px rgba(69, 81, 100, 0.1);
+    box-shadow: 0px 15px 140px 0px rgba(69, 81, 100, 0.1);
+    border-radius: 0 0 10px 10px;
+    padding-top: 0;
+    margin-top: -6px;
+    padding-left: 72px;
+    padding-right: 70px;
+    padding-bottom: 23px;
+    color: rgba(30, 48, 86, 0.8);
+    line-height: 30px;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 350px; 
+    margin: 20px auto; 
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px; 
+    font-weight: bold;
+}
+
+form input[type="number"] {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="range"] {
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+#slider-value {
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+input[type="submit"] {
+    background-color: #ff008b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s; /* Add a smooth transition effect for the background color */
+}
+
+input[type="submit"]:hover {
+    background-color: #ff0055; /* Change the background color on hover */
+}
+
+
+
+
+  /* Center loader */
+  .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+  }
+
+  /* Blur the page */
+  .blur {
+    filter: blur(20px); /* Adjust the blur amount as needed */
+    pointer-events: none;
+  }
+
+
+
+
+
+/* Style the dropdown container */
+.select-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the label */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Style the select element */
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  /* Style the select when it's focused */
+  select:focus {
+    border-color: #007bff; /* Change this color to your preferred focus color */
+  }
+  
+  /* Style the dropdown arrow */
+  .select-container::after {
+    content: '\25BC'; /* Downward arrow character */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Remove the default dropdown arrow in modern browsers */
+  select::-ms-expand {
+    display: none;
+  }
+  
+  /* Style the options within the dropdown */
+  option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the hover and selected option */
+  select:hover option:hover,
+  select option:checked {
+    background-color: #007bff; /* Change this color to your preferred hover/selected color */
+    color: #fff; /* Change this color to your preferred text color */
+  }
+  
+  /* Style the select when it's disabled */
+  select:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+  }
+  
+  /* Style the select when it's required */
+  select:required {
+    border-color: #dc3545; /* Change this color to your preferred required color */
+  }
+  
+
+  .homepage-link {
+    color: #ff008b; /* Change the color to your preference */
+    text-decoration: none; /* Remove the underline from the link */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px 20px; /* Add padding to create a box around the text */
+    border: 1px solid #ff008b;; /* Add a border with the link color */
+    display: inline-block; /* Make the link behave like a block element */
+}
+
+.homepage-link:hover {
+    text-decoration: underline;
+    color: #ff008b; /* Add underline on hover */
+
+}

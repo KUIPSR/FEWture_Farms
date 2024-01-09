@@ -32,7 +32,7 @@ This script automates the setup process for a Flask application on both Windows 
 ### Windows
 
 1. **Run the Script:**
-   - Execute the `setup_windows.bat` script.
+   - Execute the `setup_windows.bat` script from the command line from the folder containing the file as administrator.
    - This script will automatically check and install dependencies, create a virtual environment, install required Python modules, and set up NetLogo.
    - After running the script, the Flask application will be ready to run.
 

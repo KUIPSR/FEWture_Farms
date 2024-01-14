@@ -80,6 +80,7 @@
 													<label for="sg_area">SG Area:</label>
 													<input type="number" id="sg_area" name="sg_area" value="125">
 													<br>
+                                                    <label for="info">Circles show proportional crop areas (acres), SG = Grain sorghum</label>
 												</form>
 											</div>
                                         </div>
@@ -100,7 +101,9 @@
 											<div class="form-container">
 												<a href="/" class="back-link"></a>
 												<form action="/calculate" method="POST" id="EnergyForm">
-													<label for="energy_value">Energy Value:</label>
+                                                    <label for="energy:">NYear is lifespan, Loan-term is a fraction of Nyear</label>
+													<br>
+                                                    <label for="energy_value">Energy Value ($/MWh):</label>
 													<input type="number" id="energy_value" name="energy_value" value="29">
 													<br>
 										
@@ -108,67 +111,71 @@
 													<input type="number" id="loan_term" name="loan_term" value="1">
 													<br>
 										
-													<label for="interest">Interest:</label>
+													<label for="interest">Interest (%):</label>
 													<input type="number" id="interest" name="interest" value="2">
 													<br>
-										
+
+                                                    <label for="Wind:">Wind: Wind degradation applies after 10 years</label>
+                                                    <br>
 													<label for="num_wind_turbines">Number of Wind Turbines:</label>
 													<input type="number" id="num_wind_turbines" name="num_wind_turbines" value="2">
 													<br>
 										
-													<label for="nyear_w">Number of years (Wind):</label>
+													<label for="nyear_w">Number of years - Wind (years):</label>
 													<input type="number" id="nyear_w" name="nyear_w" value="30">
 													<br>
 										
-													<label for="capacity_w">Capacity (Wind):</label>
+													<label for="capacity_w">Capacity - Wind (MW):</label>
 													<input type="number" id="capacity_w" name="capacity_w" value="2">
 													<br>
 										
-													<label for="cost_w">Cost (Wind):</label>
+													<label for="cost_w">Cost - Wind ($/kW):</label>
 													<input type="number" id="cost_w" name="cost_w" value="1470">
 													<br>
 										
-													<label for="degrade_w">Degrade (Wind):</label>
+													<label for="degrade_w">Degrade - Wind (%/year):</label>
 													<input type="number" id="degrade_w" name="degrade_w" value="1">
 													<br>
 										
-													<label for="wind_factor">Wind Factor:</label>
+													<label for="wind_factor">Wind Factor (%):</label>
 													<input type="number" id="wind_factor" name="wind_factor" value="42">
 													<br>
-										
+
+                                                    <label for="Solar:">Solar: 1 set = 1,000 panels</label>
+                                                    <br>
 													<label for="num_panel_sets">Number of Panel Sets:</label>
 													<input type="number" id="num_panel_sets" name="num_panel_sets" value="3">
 													<br>   
 										
-													<label for="nyear_s">Number of years (Solar):</label>
+													<label for="nyear_s">Number of years - Solar (years):</label>
 													<input type="number" id="nyear_s" name="nyear_s" value="25">
 													<br> 
 										
-													<label for="cost_s">Cost (Solar):</label>
+													<label for="cost_s">Cost - Solar ($/kW):</label>
 													<input type="number" id="cost_s" name="cost_s" value="1750">
 													<br> 
 										
-													<label for="capacity_s">Capacity (Solar):</label>
+													<label for="capacity_s">Capacity - Solar (W):</label>
 													<input type="number" id="capacity_s" name="capacity_s" value="250">
 													<br> 
 										
-													<label for="degrade_s">Degrade (Solar):</label>
+													<label for="degrade_s">Degrade - Solar (%/year):</label>
 													<input type="number" id="degrade_s" name="degrade_s" value="1">
 													<br>
 										
-													<label for="sun_hrs">Sun Hours:</label>
+													<label for="sun_hrs">Sun Hours (hrs/day):</label>
 													<input type="number" id="sun_hrs" name="sun_hrs" value="6">
 													<br>
 													
-													<label for="ptc_w">PTC (Wind):</label>
+													<label for="ptc_w">PTC_W (Production Tax credit for Wind -$/kWh):</label>
 													<input type="number" id="ptc_w" name="ptc_w" value="0">
 													<br>
 										
-													<label for="itc_s">ITC (Solar):</label>
+													<label for="itc_s">ITC_S (Investment Tax Credit for Solar - %):</label>
 													<input type="number" id="itc_s" name="itc_s" value="0">
 													<br>
 										
-													<label for="ptc_s">PTC (Solar):</label>
+													<label for="ptc_s">PTC_S (Production Tax credit for Solar - $/kWh):</label>
 													<input type="number" id="ptc_s" name="ptc_s" value="0">
 													<br>
 										
@@ -192,6 +199,8 @@
                                         <div class="card-body">
                                             <div class="form-container">
                                                 <form action="/calculate" method="post" id="climateForm">
+                                                    <label for="climate_scenario">Climate Scenario: Alternative future annual values for temperature (T), precipitation (P) and solar radiation (S).</label>
+                                                    <br>
                                                     <label for="future_processes">Future Process:</label>
                                                     <select id="future_processes" name="future_processes">
                                                         <option value="Repeat Historical">Repeat Historical</option>
@@ -201,6 +210,8 @@
                                                     </select>
                                                     <br>
                                         
+                                                    <label for="GCM">For "GCM"</label>
+                                                    <br>
                                                     <label for="climate_model">Climate Model:</label>
                                                     <select id="climate_model" name="climate_model">
                                                         <option value="RCP4.5">RCP4.5</option>
@@ -246,11 +257,14 @@
 											<div class="form-container">
 												<a href="/" class="back-link"></a>
 												<form action="/calculate" method="POST" id="IrrigationForm">
-													<label for="aquifier_level">Aquifier Level:</label>
+                                                    <label for="water_effects1">Effects on surface water (SW) quality are accumulated.</label>
+                                                    <label for="water_effects2">Irrigation comes from groundwater pumping.</label>
+                                                    <br>
+													<label for="aquifier_level">Aquifer Level:</label>
 													<input type="number" id="aquifier_level" name="aquifier_level" value="200">
 													<br>
 										
-													<label for="min_aquifier_level">Min. Aquifier Level:</label>
+													<label for="min_aquifier_level">Min. Aquifer Level:</label>
 													<input type="number" id="min_aquifier_level" name="min_aquifier_level" value="125">
 													<br>
 													<!-- <input type="submit" value="Calculate"> -->

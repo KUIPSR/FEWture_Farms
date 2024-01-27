@@ -28,21 +28,19 @@ function drawCharts() {
             const getCropInsuranceData = JSON.parse(data.insur_income_img);
 
             const cropIncomeTitle = getCropIncomeData.Crop_Income.total_farm_net_income;
-            console.log(cropIncomeTitle)
             const cropInsuranceTitle = getCropInsuranceData.Insurance_Income.total_income_from_crop_insurance;
-            console.log(cropInsuranceTitle)
 
             const years = getCropIncomeData.Crop_Income.Year.map(Number);
-            const cropData = getCropIncomeData.Crop_Income.Crop.map(Number);
-            const energyData = getCropIncomeData.Crop_Income.Energy.map(Number);
-            const allData = getCropIncomeData.Crop_Income.All.map(Number);
-            const usData =  getCropIncomeData.Crop_Income.US$0.map(Number);
+            const cropData = getCropIncomeData.Crop_Income.Crop ? getCropIncomeData.Crop_Income.Crop.map(Number):[];
+            const energyData = getCropIncomeData.Crop_Income.Energy ? getCropIncomeData.Crop_Income.Energy.map(Number):[];
+            const allData = getCropIncomeData.Crop_Income.All ? getCropIncomeData.Crop_Income.All.map(Number):[];
+            const usData =  getCropIncomeData.Crop_Income.US$0 ? getCropIncomeData.Crop_Income.US$0.map(Number):[];
     
             const year = getCropInsuranceData.Insurance_Income.Year.map(Number);
-            const CornData = getCropInsuranceData.Insurance_Income.Corn.map(Number);
-            const WheatData = getCropInsuranceData.Insurance_Income.Wheat.map(Number);
-            const SoyaData = getCropInsuranceData.Insurance_Income.Soybean.map(Number);
-            const getsgData = getCropInsuranceData.Insurance_Income.SG.map(Number);
+            const CornData = getCropInsuranceData.Insurance_Income.Corn ? getCropInsuranceData.Insurance_Income.Corn.map(Number):[];
+            const WheatData = getCropInsuranceData.Insurance_Income.Wheat ? getCropInsuranceData.Insurance_Income.Wheat.map(Number):[];
+            const SoyaData = getCropInsuranceData.Insurance_Income.Soybean ? getCropInsuranceData.Insurance_Income.Soybean.map(Number):[];
+            const getsgData = getCropInsuranceData.Insurance_Income.SG ? getCropInsuranceData.Insurance_Income.SG.map(Number):[];
 
             // Create the first Highcharts chart for farmEnergyProduction
             Highcharts.chart('chart1', {

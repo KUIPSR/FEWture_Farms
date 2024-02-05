@@ -1,7 +1,5 @@
 # FEWtures
 
-![FEWCalc_logo](https://user-images.githubusercontent.com/47259270/85034602-e3270100-b147-11ea-8486-4e26997e8ae4.png)
-
 NetLogo Software is a versatile modeling and simulation platform used in science, education, and research. It enables the creation of agent-based models, facilitating the study of complex systems and emergent phenomena. With an intuitive interface and an open-source approach, NetLogo is widely embraced by ecologists, economists, sociologists, and biologists, offering a valuable tool for understanding dynamic systems and fostering collaboration within its community.
 
 ## Setup Instructions

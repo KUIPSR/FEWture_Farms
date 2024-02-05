@@ -37,19 +37,20 @@ def crop_income_calculation():
 
     df=df[['year','Crop','Energy','All','US$0']]
 
+    temp_dict = {'Year':df['year'].values.tolist()}
+
     total_farm_net_income = f'Total Farm Net Income - Start Year: {start_year}'
 
 
-    temp = {"Crop_Income": {
-        'Year': df['year'].values.tolist(),
-        'Crop': df['Crop'].values.tolist(),
-        'Energy': df['Energy'].values.tolist(),
-        'All': df['All'].values.tolist(),
-        'US$0': df['US$0'].values.tolist(),
-        'total_farm_net_income':total_farm_net_income
-    }}
+    columns_to_include = ['Crop','Energy','All','US$0']
+    for column in columns_to_include:
+        if not (df[column] == 0).all():
+            temp_dict[column] = df[column].values.tolist()
+    temp_dict['total_farm_net_income'] = total_farm_net_income
 
-    
+
+    temp = {"Crop_Income": temp_dict}
+        
     print(temp)
 
     return json.dumps(temp)
@@ -97,17 +98,15 @@ def insurance_income_calculation():
 
     total_income_from_crop_insurance = f'Total Income From Crop Insurance - Start Year: {start_year}'
 
+    temp_dict = {'Year': df['year'].values.tolist()}
+
+    columns_to_include = ['Corn','Wheat','Soybean','SG']
+    for column in columns_to_include:
+        if not (df[column] == 0).all():
+            temp_dict[column] = df[column].values.tolist()
+    temp_dict['total_income_from_crop_insurance'] = total_income_from_crop_insurance
 
 
-    temp = {
-        "Insurance_Income": {
-            'Year': df['year'].values.tolist(),
-            'Corn': df['Corn'].values.tolist(),
-            'Wheat': df['Wheat'].values.tolist(),
-            'Soybean': df['Soybean'].values.tolist(),
-            'SG': df['SG'].values.tolist(),
-            'total_income_from_crop_insurance':total_income_from_crop_insurance
-        }
-    }
+    temp = {"Insurance_Income": temp_dict}
 
     return json.dumps(temp)

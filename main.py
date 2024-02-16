@@ -151,7 +151,7 @@ def calculate():
 
     energy_value = int(data['energy']['energy_value'])
     loan_term = int(data['energy']['loan_term'])
-    interest = int(data['energy']['interest'])
+    interest = float(data['energy']['interest'])
     num_wind_turbines = int(data['energy']['num_wind_turbines'])
     nyear_w = int(data['energy']['nyear_w'])
     capacity_w = int(data['energy']['capacity_w'])

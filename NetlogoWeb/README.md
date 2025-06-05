@@ -1,0 +1,5 @@
+# FEWture Farms Web Model
+This web model was based on the NetLogo model developed by Jirapat (Mos) Phetheet and Professor Mary C. Hill. Some changes were made to their model code to enable it to run on NetLogo Web. These include setting immutable default input data and removing certain images from the desktop version. Users can access the web application version of this model either at the [FEWtureFarms webpage](https://ksdata.ku.edu/FEWtures/FEWtureFarms/) or by downloading the [model file](https://github.com/KUIPSR/FEWture_Farms/blob/main/NetlogoWeb/FEWture%20Farms%20Web%20Model.nlogo) and then uploading it to [NetLogo Web](https://netlogoweb.org/). 
+The [HTML version]( https://github.com/KUIPSR/FEWture_Farms/blob/main/NetlogoWeb/FEWtureFarmsWebmodel.html) of this model was produced by exporting the NetLogo Web model to HTML and then removing console elements.  
+
+For more information on the web model, please see the model notes within the model file or visit the FEWture Farms webpage. 

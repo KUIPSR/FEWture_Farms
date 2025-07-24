@@ -2249,7 +2249,7 @@ to Default
 end
 
 to export-data
- ; export-all-plots "Results.csv"
+  export-world "netlogo-world-file.csv"
   export-plot "Ag Net Income" "ag-net-income.csv"
   export-plot "Crop Production" "crop-production.csv"
   export-plot "Crop Groundwater Irrigation" "crop-groundwater-irrigation.csv"
@@ -2263,8 +2263,8 @@ end
 GRAPHICS-WINDOW
 428
 14
-820
-407
+819
+406
 -1
 -1
 1.91
@@ -2285,7 +2285,7 @@ GRAPHICS-WINDOW
 0
 1
 Years
-30
+30.0
 
 BUTTON
 172
@@ -2310,7 +2310,7 @@ INPUTBOX
 106
 126
 corn_area
-200
+200.0
 1
 0
 Number
@@ -2321,7 +2321,7 @@ INPUTBOX
 208
 126
 wheat_area
-125
+125.0
 1
 0
 Number
@@ -2332,7 +2332,7 @@ INPUTBOX
 307
 126
 soybeans_area
-0
+0.0
 1
 0
 Number
@@ -2343,7 +2343,7 @@ INPUTBOX
 418
 126
 sg_area
-125
+125.0
 1
 0
 Number
@@ -2355,30 +2355,30 @@ TEXTBOX
 74
 Agriculture -------------------------------------\n
 13
-63
+63.0
 1
 
 PLOT
-821
-35
-1114
-300
+1104
+36
+1390
+301
 Ag Net Income
 Years
 $
-0
-60
-0
-10
+0.0
+60.0
+0.0
+10.0
 true
 true
 "" ""
 PENS
-"Corn" 1 0 -8684775 true "" "plot corn-net-income"
-"Wheat" 1 0 -3844592 true "" "plot wheat-net-income"
-"Soybeans" 1 0 -13210332 true "" "plot soybeans-net-income"
-"SG" 1 0 -12440034 true "" "plot milo-net-income"
-"US$0" 1 2 -8053223 true "" "plot zero-line"
+"Corn" 1.0 0 -8684775 true "" "plot corn-net-income"
+"Wheat" 1.0 0 -3844592 true "" "plot wheat-net-income"
+"Soybeans" 1.0 0 -13210332 true "" "plot soybeans-net-income"
+"SG" 1.0 0 -12440034 true "" "plot milo-net-income"
+"US$0" 1.0 2 -8053223 true "" "plot zero-line"
 
 BUTTON
 229
@@ -2404,7 +2404,7 @@ TEXTBOX
 446
 Water ----------------
 13
-95
+95.0
 1
 
 TEXTBOX
@@ -2414,50 +2414,50 @@ TEXTBOX
 174
 Energy ------------
 13
-25
+25.0
 1
 
 PLOT
-822
+820
 625
-1117
+1115
 845
 Crop Groundwater Irrigation
 Years
 Inches
-0
-60
-0
-10
+0.0
+60.0
+0.0
+10.0
 true
 true
 "" ""
 PENS
-"Corn" 1 0 -8684775 true "" "plot corn-use-in"
-"Wheat" 1 0 -3844592 true "" "plot wheat-use-in"
-"Soybeans" 1 0 -13210332 true "" "plot soybeans-use-in"
-"SG" 1 0 -12440034 true "" "plot milo-use-in"
+"Corn" 1.0 0 -8684775 true "" "plot corn-use-in"
+"Wheat" 1.0 0 -3844592 true "" "plot wheat-use-in"
+"Soybeans" 1.0 0 -13210332 true "" "plot soybeans-use-in"
+"SG" 1.0 0 -12440034 true "" "plot milo-use-in"
 
 PLOT
-1118
-35
-1395
-300
+821
+36
+1100
+301
 Crop Production
 Years
 Bu/ac
-0
-60
-0
-10
+0.0
+60.0
+0.0
+10.0
 true
 true
 "" ""
 PENS
-"Corn" 1 0 -8684775 true "" "plot corn-tot-yield\n"
-"Wheat" 1 0 -3844592 true "" "plot wheat-tot-yield"
-"Soybeans" 1 0 -13210332 true "" "plot soybeans-tot-yield"
-"SG" 1 0 -12440034 true "" "plot milo-tot-yield"
+"Corn" 1.0 0 -8684775 true "" "plot corn-tot-yield\n"
+"Wheat" 1.0 0 -3844592 true "" "plot wheat-tot-yield"
+"Soybeans" 1.0 0 -13210332 true "" "plot soybeans-tot-yield"
+"SG" 1.0 0 -12440034 true "" "plot milo-tot-yield"
 
 BUTTON
 289
@@ -2485,7 +2485,7 @@ SLIDER
 #wind_turbines
 1
 6
-2
+2.0
 1
 1
 NIL
@@ -2497,10 +2497,10 @@ SLIDER
 168
 545
 Aquifer_thickness
-aquifer_thickness
+Aquifer_thickness
 70
 300
-200
+200.0
 10
 1
 Ft
@@ -2512,10 +2512,10 @@ SLIDER
 140
 361
 Capacity_S
-capacity_s
+Capacity_S
 100
 300
-250
+250.0
 10
 1
 W
@@ -2527,10 +2527,10 @@ SLIDER
 139
 326
 #Panel_sets
-#panel_sets
+#Panel_sets
 0
 8
-3
+3.0
 0.1
 1
 NIL
@@ -2543,28 +2543,28 @@ TEXTBOX
 145
 Circles show proportional crop areas (acres), SG =Grain sorghum.
 10
-63
+63.0
 1
 
 PLOT
 820
 340
-1115
+1100
 585
 Farm Energy Production
 Years
 MWh
-0
-60
-0
-2000
+0.0
+60.0
+0.0
+2000.0
 true
 true
 "" ""
 PENS
-"Wind        " 1 0 -14070903 true "" "ifelse ticks = 0 [set wind-production 0\nplot wind-production]\n[plot wind-production]"
-"Solar " 1 0 -5298144 true "" "ifelse ticks = 0 [set solar-production 0\nplot solar-production]\n[plot solar-production]"
-"0 MWh" 1 2 -8053223 true "" "plot zero-line"
+"Wind        " 1.0 0 -14070903 true "" "ifelse ticks = 0 [set wind-production 0\nplot wind-production]\n[plot wind-production]"
+"Solar " 1.0 0 -5298144 true "" "ifelse ticks = 0 [set solar-production 0\nplot solar-production]\n[plot solar-production]"
+"0 MWh" 1.0 2 -8053223 true "" "plot zero-line"
 
 TEXTBOX
 192
@@ -2573,7 +2573,7 @@ TEXTBOX
 445
 Climate Scenario ------------
 12
-0
+0.0
 1
 
 CHOOSER
@@ -2582,30 +2582,30 @@ CHOOSER
 367
 523
 Future_Process
-future_process
+Future_Process
 "Repeat Historical" "Wetter Future" "Dryer Future" "GCM"
 0
 
 PLOT
-4
-625
-440
-843
+5
+628
+391
+842
 Total Net Income
 Years
 $
-0
-60
-0
-10
+0.0
+60.0
+0.0
+10.0
 true
 true
 "" ""
 PENS
-"Crop" 1 0 -12087248 true "" "ifelse ticks = 0 [set corn-expenses 0\nset wheat-expenses 0\nset soybeans-expenses 0\nset milo-expenses 0\nplot (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]\n[plot (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]"
-"Energy     " 1 0 -955883 true "" "ifelse ticks = 0 [set energy-net-income 0\nplot energy-net-income]\n[plot energy-net-income]"
-"All" 1 0 -16777216 true "" "ifelse ticks = 0 [set energy-net-income 0\nplot (energy-net-income) + (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]\n[plot (energy-net-income) + (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]"
-"US$0" 1 2 -8053223 true "" "plot zero-line"
+"Crop" 1.0 0 -12087248 true "" "ifelse ticks = 0 [set corn-expenses 0\nset wheat-expenses 0\nset soybeans-expenses 0\nset milo-expenses 0\nplot (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]\n[plot (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]"
+"Energy     " 1.0 0 -955883 true "" "ifelse ticks = 0 [set energy-net-income 0\nplot energy-net-income]\n[plot energy-net-income]"
+"All" 1.0 0 -16777216 true "" "ifelse ticks = 0 [set energy-net-income 0\nplot (energy-net-income) + (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]\n[plot (energy-net-income) + (corn-tot-income - corn-expenses) + (wheat-tot-income - wheat-expenses) + (soybeans-tot-income - soybeans-expenses) + (milo-tot-income - milo-expenses)]"
+"US$0" 1.0 2 -8053223 true "" "plot zero-line"
 
 TEXTBOX
 9
@@ -2614,7 +2614,7 @@ TEXTBOX
 224
 • Wind:
 11
-25
+25.0
 1
 
 TEXTBOX
@@ -2624,28 +2624,28 @@ TEXTBOX
 297
 • Solar:
 11
-25
+25.0
 1
 
 PLOT
-1119
+1104
 340
-1395
+1394
 585
 Energy Net Income
 Years
 $
-0
-60
-0
-0
+0.0
+60.0
+0.0
+0.0
 true
 true
 "" ""
 PENS
-"Wind        " 1 0 -14070903 true "" "ifelse ticks = 0 [set wind-net-income 0\nplot (wind-net-income)]\n[plot (wind-net-income)]"
-"Solar" 1 0 -5298144 true "" "ifelse ticks = 0 [set solar-net-income 0\nplot (solar-net-income)]\n[plot (solar-net-income)]"
-"US$0" 1 2 -8053223 true "" "plot zero-line"
+"Wind        " 1.0 0 -14070903 true "" "ifelse ticks = 0 [set wind-net-income 0\nplot (wind-net-income)]\n[plot (wind-net-income)]"
+"Solar" 1.0 0 -5298144 true "" "ifelse ticks = 0 [set solar-net-income 0\nplot (solar-net-income)]\n[plot (solar-net-income)]"
+"US$0" 1.0 2 -8053223 true "" "plot zero-line"
 
 TEXTBOX
 825
@@ -2654,7 +2654,7 @@ TEXTBOX
 33
 Agriculture ------------------------------------------------------
 15
-63
+63.0
 1
 
 TEXTBOX
@@ -2664,7 +2664,7 @@ TEXTBOX
 334
 Energy ------------------------------------------------------------------------------------------
 15
-25
+25.0
 1
 
 TEXTBOX
@@ -2674,17 +2674,17 @@ TEXTBOX
 619
 Water ---------------------------------------------------------------------------------------------------------------------------------------------------------------------\n
 15
-95
+95.0
 1
 
 TEXTBOX
 429
-412
+418
 811
-455
+467
 • First 10 years use historical data (2008-2017), subsequent years apply Future Process. Year represents a sequential year. Year 1 is 2008 and year 60 is 2067.
-11
-3
+13
+3.0
 1
 
 TEXTBOX
@@ -2694,7 +2694,7 @@ TEXTBOX
 514
 • Irrigation comes from groundwater (GW) pumping
 11
-95
+95.0
 1
 
 TEXTBOX
@@ -2704,7 +2704,7 @@ TEXTBOX
 56
 World
 15
-0
+0.0
 1
 
 TEXTBOX
@@ -2712,9 +2712,9 @@ TEXTBOX
 599
 390
 618
-Farm Economy ---------------------------------------------------------------
+Farm Economy -----------------------------------------------------------------\n\n
 15
-0
+0.0
 1
 
 SLIDER
@@ -2723,75 +2723,65 @@ SLIDER
 170
 43
 Simulation_period
-simulation_period
+Simulation_period
 1
 90
-59
+59.0
 1
 1
 Yrs
 HORIZONTAL
 
 PLOT
-443
-625
-819
-842
+397
+628
+785
+843
 Income From Crop Insurance
 NIL
 $
-0
-60
-0
-10
+0.0
+60.0
+0.0
+10.0
 true
 true
 "" ""
 PENS
-"Corn" 1 1 -4079321 true "" "ifelse corn-claimed = \"YES\" [plot corn-ins-claimed]\n[plot zero-line]"
-"Wheat" 1 1 -3844592 true "" "ifelse wheat-claimed = \"YES\" [plot wheat-ins-claimed]\n[plot zero-line]"
-"Soybeans" 1 1 -13210332 true "" "ifelse soybeans-claimed = \"YES\" [plot soybeans-ins-claimed]\n[plot zero-line]"
-"SG" 1 1 -12440034 true "" "ifelse milo-claimed = \"YES\" [plot milo-ins-claimed]\n[plot zero-line]"
+"Corn" 1.0 1 -4079321 true "" "ifelse corn-claimed = \"YES\" [plot corn-ins-claimed]\n[plot zero-line]"
+"Wheat" 1.0 1 -3844592 true "" "ifelse wheat-claimed = \"YES\" [plot wheat-ins-claimed]\n[plot zero-line]"
+"Soybeans" 1.0 1 -13210332 true "" "ifelse soybeans-claimed = \"YES\" [plot soybeans-ins-claimed]\n[plot zero-line]"
+"SG" 1.0 1 -12440034 true "" "ifelse milo-claimed = \"YES\" [plot milo-ins-claimed]\n[plot zero-line]"
 
 TEXTBOX
-400
+403
 600
-810
+813
 620
-Crop Insurance ------------------------------------------------------------------
+Crop Insurance --------------------------------------------------------\n
 15
-0
+0.0
 1
 
 PLOT
-1120
+1119
 625
-1395
+1394
 845
 Groundwater Level
 NIL
 Feet
-0
-60
-0
-10
+0.0
+60.0
+0.0
+10.0
 true
 true
 "" ""
 PENS
-"GW level   " 1 0 -14454117 true "" "plot gw-level\nifelse gw-level < Min_Aq_thickness [set-plot-pen-color red]\n[ifelse gw-level < gw-upper-limit [set-plot-pen-color yellow]\n[set-plot-pen-color  blue]]"
-"Min Aq" 1 2 -5298144 true "" "plot (Min_Aq_Thickness)"
-"Min+30" 1 2 -7500403 true "" "plot (gw-upper-limit)"
-
-TEXTBOX
-430
-457
-856
-475
-• FEWCalc requires NetLogo version 6.1.0 or higher.
-11
-3
-1
+"GW level   " 1.0 0 -14454117 true "" "plot gw-level\nifelse gw-level < Min_Aq_thickness [set-plot-pen-color red]\n[ifelse gw-level < gw-upper-limit [set-plot-pen-color yellow]\n[set-plot-pen-color  blue]]"
+"Min Aq" 1.0 2 -5298144 true "" "plot (Min_Aq_Thickness)"
+"Min+30" 1.0 2 -7500403 true "" "plot (gw-upper-limit)"
 
 TEXTBOX
 193
@@ -2800,7 +2790,7 @@ TEXTBOX
 491
 Alternative future annual values for temperature (T), precipitation (P), and solar radiation (S).
 11
-0
+0.0
 1
 
 CHOOSER
@@ -2809,18 +2799,18 @@ CHOOSER
 367
 586
 Climate_Model
-climate_model
+Climate_Model
 "RCP4.5" "RCP8.5"
 0
 
 TEXTBOX
 430
-477
+470
 820
-530
-• Global climate models (GCMs) are used to project future climate. Climate projections are largely based on greenhouse gas (GHG) emissions. RCP4.5 represents an intermediate scenario, whereas RCP8.5 is a scenario with very high GHG emissions.
-11
-3
+538
+• Global climate models (GCMs) can be used to project future climate. Climate projections are largely based on greenhouse gas (GHG) emissions. RCP4.5 represents an intermediate scenario; whereas RCP8.5 is a scenario with very high GHG emissions.
+13
+3.0
 1
 
 TEXTBOX
@@ -2830,7 +2820,7 @@ TEXTBOX
 554
 For \"GCM\"
 11
-0
+0.0
 1
 
 TEXTBOX
@@ -2840,7 +2830,7 @@ TEXTBOX
 461
 • Effects on surface water (SW) quality are accumulated.
 11
-95
+95.0
 1
 
 SLIDER
@@ -2849,10 +2839,10 @@ SLIDER
 276
 278
 Degrade_W
-degrade_w
+Degrade_W
 0
 2
-1
+0.4
 0.1
 1
 %/yr
@@ -2865,7 +2855,7 @@ TEXTBOX
 216
 Wind degradation applies after 10 yrs
 9
-25
+25.0
 1
 
 SLIDER
@@ -2874,10 +2864,10 @@ SLIDER
 166
 195
 Energy_value
-energy_value
+Energy_value
 0
 50
-38
+38.0
 0.1
 1
 $/MWh
@@ -2889,10 +2879,10 @@ SLIDER
 280
 326
 Nyear_S
-nyear_s
+Nyear_S
 20
 30
-25
+25.0
 1
 1
 Yrs
@@ -2904,10 +2894,10 @@ SLIDER
 275
 243
 Nyear_W
-nyear_w
+Nyear_W
 20
 30
-30
+28.0
 2
 1
 Yrs
@@ -2919,10 +2909,10 @@ SLIDER
 162
 412
 PTC_W
-ptc_w
+PTC_W
 0
 0.03
-0
+0.0
 0.001
 1
 $/kWh
@@ -2934,10 +2924,10 @@ SLIDER
 140
 278
 Capacity_W
-capacity_w
+Capacity_W
 1
 2
-2
+2.0
 1
 1
 MW
@@ -2949,10 +2939,10 @@ SLIDER
 299
 412
 ITC_S
-itc_s
+ITC_S
 0
 30
-0
+0.0
 1
 1
 %
@@ -2964,7 +2954,7 @@ SLIDER
 422
 412
 PTC_S
-ptc_s
+PTC_S
 0
 0.03
 0.008
@@ -2980,7 +2970,7 @@ TEXTBOX
 163
 NYear is lifespan, Loan-term is a fraction of Nyear.
 9
-25
+25.0
 1
 
 SLIDER
@@ -3005,7 +2995,7 @@ TEXTBOX
 31
 FEWCalc 1.0.1
 14
-0
+0.0
 1
 
 SLIDER
@@ -3014,10 +3004,10 @@ SLIDER
 168
 586
 Min_Aq_Thickness
-min_aq_thickness
+Min_Aq_Thickness
 0
 50
-30
+30.0
 1
 1
 Ft
@@ -3030,7 +3020,7 @@ TEXTBOX
 381
 • Tax Credits: 
 11
-25
+25.0
 1
 
 SLIDER
@@ -3039,10 +3029,10 @@ SLIDER
 423
 326
 Cost_S
-cost_s
+Cost_S
 1000
 4000
-1750
+1750.0
 1
 1
 $/kW
@@ -3054,10 +3044,10 @@ SLIDER
 421
 243
 Cost_W
-cost_w
+Cost_W
 1000
 2500
-1470
+1470.0
 1
 1
 $/kW
@@ -3070,7 +3060,7 @@ TEXTBOX
 382
 Solar. Choose 1, ITC OR PTC
 11
-25
+25.0
 1
 
 TEXTBOX
@@ -3080,7 +3070,7 @@ TEXTBOX
 299
 1 set = 1,000 panels
 9
-25
+25.0
 1
 
 BUTTON
@@ -3106,7 +3096,7 @@ SLIDER
 424
 361
 Sun_Hrs
-sun_hrs
+Sun_Hrs
 0
 8
 5.6
@@ -3121,7 +3111,7 @@ SLIDER
 422
 278
 Wind_factor
-wind_factor
+Wind_factor
 20
 60
 42.1
@@ -3136,10 +3126,10 @@ SLIDER
 287
 195
 Loan_term
-loan_term
+Loan_term
 0
 1
-1
+1.0
 0.2
 1
 NIL
@@ -3151,10 +3141,10 @@ SLIDER
 420
 195
 Interest
-interest
+Interest
 0.1
 10
-2
+2.0
 0.1
 1
 %
@@ -3167,7 +3157,7 @@ TEXTBOX
 381
 Wind
 11
-25
+25.0
 1
 
 TEXTBOX
@@ -3177,14 +3167,14 @@ TEXTBOX
 28
 Restore
 11
-0
+0.0
 1
 
 BUTTON
-428
-546
-800
-579
+427
+547
+799
+580
 Export data
 export-data
 NIL
@@ -3196,177 +3186,395 @@ NIL
 NIL
 NIL
 0
+
 @#$#@#$#@
-# FEWCalc
-**FEWCalc** is the **Food-Energy-Water Calculator** assembled by Jirapat (Mos) Phetheet -- a Master's student and Professor Mary C. Hill from Department of Geology, the University of Kansas. 
+# FEWture Farms 
 
-The calculation is divided into two parts. The first part is crop calculation using a crop model called Decision Support System for Agrotechnology Transfer (DSSAT) which was developed by [Jones et al., 2003](https://doi.org/10.1016/S1161-0301(02)00107-7) from the University of Florida. The other is the FEWCalc conducted using NetLogo agent-based modeling software by [Uri Wilensky, 1999](https://ccl.northwestern.edu/netlogo/docs). 
+**FEWture Farms is an interactive tool for farmers, students, and others. It is designed to provide insight into the productivity and economics of a farm with possible renewable energy generation capacity. FEWture Farms integrates agriculture, water, energy, and economic components. It calculates farm income, and provides a visualization of the system and graphs of results.
+ 
+Hopefully, FEWture Farms will help stakeholders in the agricultural, energy, and water communities identify economic opportunities for Small Town and Rural (STAR) agricultural communities through local renewable energy resources. This will hopefully encourage a resilient Food, Energy, and Water future. As an educational tool, FEWture Farms allows students and teachers to peak into the systems that put water in their glasses, food on their table, and power in their light bulbs.
 
-The location considered is the area around Garden City in [Finney County, Kansas.](https://en.wikipedia.org/wiki/Finney_County,_Kansas) FEWCalc is developed and tested using data from the southern High Plains aquifer (HPA), where groundwater has been decreasing at an alarming rate these days. Fortunately, Kansas is well positioned in the nation's wind belt that has access to a robust renewable energy source (Anderson et al., 2012). Economically, Kansas is the second leading state, with about 50% of the electricity sold in the state being met by wind (Wiser and Bolinger, 2018).
+## Introduction
 
-FEWCalc is an interactive tool integrating agriculture, energy, and water components; calculating farm income; as well as visualizing results in the NetLogo World.
+The conditions and practices simulated are for the period 2008 to as late as 2097. The model is developed using data from 2008 to 2017, which is referred to as the “historical”. Period of time. Results from 2018 to 2097 are estimated projections that are likely to correctly identify trends and unlikely to be precisely accurate. Utility for the projections might reasonably be compared to a long-term (more than 10 day) weather forecast. 
 
-![HPA](file:HPA_Lifetime.png)
+FEWture Farms can be used to address a question like “What is an educated guess as to what would happen if historical agricultural practices, technologies, and economics remain similar going forward given water resource limitations, anticipated (as of 2018) changes in climate, and world agro-economic conditions?”
 
-![WIND](file:Wind_Map.png)
+Alternatively, the question might be posed as follows. 
 
-## Load input data and initialize parameters
-### Load input data
-There are eight input files in comma-separated values (.csv) format under "FEWCalc" folder. Input values (e.g., precipitation and crop price) were from historical data between 2008 and 2017. Besides, they were calculated from DSSAT (e.g., yield and irrigation) using the same dataset (1-4) and global climate models (GCMs) (5-8). The input files listed below are separated into four major crop types in Kansas which are corn, wheat, soybean, and milo (grain sorghum).
+“What pressures must farmers address to maintain financially viable operations going forward given water resource limitations, anticipated (as of 2018) changes in climate, and world agro-economic conditions?”
 
-  * _**1_Corn_inputs.csv**_
-  * _**2_Wheat_inputs.csv**_
-  * _**3_Soybean_inputs.csv**_
-  * _**4_Milo_inputs.csv**_
-  * _**5_Corn_GCMs.csv**_
-  * _**6_Wheat_GCMs.csv**_
-  * _**7_Soybean_GCMs.csv**_
-  * _**8_Milo_GCMs.csv**_
+The simulation does not account for inflation. Prices need to be considered in the same way we consider the prices in games such as Monopoly. Some of the proportions are likely to remain similar and the simulations can provide some good experiences that inform the user about system dynamics despite being predictive in a specific sense.
+These rest of these notes are organized with the following headings. Users can click the items in this list to go to the related section.
 
-These files are composed of a number of columns which column headers are not well-defined. Here is a detailed explanation of those values.
+1.	Notes for Users
 
-  * **Year:** simulation year.
-  * **Precip (in):** historical precipitation.
-  * **Price ($/bu):** historical crop price.
-  * **Yield_1 (bu/ac):** simulated yield from irrigated farming using historical data.
-  * **Irrig_1 (in):** simulated irrigation from irrigated farming using historical data.
-  * **Yield_2 (bu/ac):** simulated yield from dryland farming using historical data.
-  * **Irrig_2 (in):** simulated irrigation from dryland farming using historical data. Values in this column are always zero.
-  * **N-app (kh/ha):** Nitrogen fertilizer rate
-  * **Precip8.5 (in):** Precipitation projection under PRPCP8.5
-  * **Yield_3 (bu/ac):** simulated yield from irrigated farming using GCM data under RCP8.5 scenario.
-  * **Irrig_3 (in):** simulated irrigation from irrigated farming using GCM data under RCP8.5 scenario.
-  * **Yield_4 (bu/ac):** simulated yield from dryland farming using GCM data under RCP8.5 scenario.
-  * **Irrig_4 (in):** simulated irrigation from dryland farming using GCM data under RCP8.5 scenario. Values in this column are always zero.
-  * **Precip4.5 (in):** Precipitation projection under PRPCP4.5
-  * **Yield_5 (bu/ac):** simulated yield from irrigated farming using GCM data under RCP4.5 scenario.
-  * **Irrig_5 (in):** simulated irrigation from irrigated farming using GCM data under RCP4.5 scenario.
-  * **Yield_6 (bu/ac):** simulated yield from dryland farming using GCM data under RCP4.5 scenario.
-  * **Irrig_6 (in):** simulated irrigation from dryland farming using GCM data under RCP4.5 scenario. Values in this column are always zero.
-  * **Unit explanation:** in is inch, $ is US dollar, bu is bushel, and ac is acre.
+	1a. Farmers
+	1b. Teachers and Students
+	1c. Everyone
 
-**Unit conversion**
+2.	More about the Test Case Simulated
 
-  * 1 bushel corn or milo per acre = 62.77 kilograms per hectare
-  * 1 bushel wheat or soybean per acre = 67.25 kilograms per hectare
+3.	FEWture Farms – Some Basics
 
-### Initialize parameters
+	3a. TechnoEconomic Structure
+	3b. Repeat a Simulation
+	3c. Simulation of Changing Conditions Over Time
 
-FEWCalc allows users to specify parameters for their own simulation in the NetLogo's interface. It is designed to define those numbers easily by using input box, slider, and chooser. Each parameter is described below.
+4.	Data
 
-  * **Simulation_period:** A period of simulation.
-  * **Agriculture**
-    * **Corn-area:** A total area of corn in acre.
-    * **Wheat-area:** A total area of wheat in acre.
-    * **Soybean-area:** A area of soybeans in acre.
-    * **Milo-area:** A total area of grain sorghum (milo) in acre.
-  * **Energy**
-    * **Energy_value:** Energy buyback rate
-    * **#Panel_sets:** A number of solar panel set (one set is 1000 panels).
-    * **Capacity_S:** Installed PV capacity, for each panel
-    * **Nyear_S:** Solar panel lifespan
-    * **Degrade_S:** Annual degradation rate
-    * **Cost_S:** Solar panel capital costs
-    * **ITC_S:** Investment Tax Credit
-    * **PTC_S:** Production Tax Credit
-    * **#Wind_turbines:** A number of wind turbines
-    * **Capacity_W:** Installed wind capacity, for each turbine
-    * **Nyear_W:** Wind turbine lifespan
-    * **Degrade_W:** Annual degradation rate
-    * **Cost_W:** Wind turbine capital costs
-    * **ITC_W:** Investment Tax Credit
-    * **PTC_W:** Production Tax Credit  
-  * **Water**
-    * **Aquifer_thickness:** Saturated thickness of the aquifer
-    * **Min_Aq_Thickness:** Minimum available aquifer thickness
-  * **Future_Process:** A drop-down menu of future process. Future process will be activated automatically after year 10 using historical data from 2008 to 2017 and GCM data (2018-2098).
-    * **Repeat Historical:** Ten-year DSSAT results are repeated consecutively.
-    * **Wetter Years:** A future that is wetter than historical period.
-    * **Dryer Years:** A future that is drier than historical period.
-    * **Impose P, T, & S:** A future involved climate change.
-        * **Climate_Model:** RCP4.5 and RCP8.5
+	4a. User Controlled Input Data
+	4b. “Hard Coded” Input data
+	4c. Unit Conversions
 
-## Model function
+5.	Model Function
+	
+	5a. Agriculture
+		Irrigated Farming
+		Dryland Framing
+	5b. Energy
+		Equations
+	5c. Water
+		Surface Water
+		Groundwater
+	5d. Economics
+		Crop Prices and Crop Dominance Globally
+	5e. Fertilizer - Ammonia Costs and an Alternative
+	A brief history of ammonia prices
+	Accounting for Alternative Cost of Ammonia
+	Considering Local Green Ammonia
+
+6.	Selected Topics for Running FEWture Farms
+
+	6a. Start the Simulation
+	6b. Export Data
+	6c. Filenames for Result Graphs
+
+7.	Model version
+
+8.	References
 
 
-### Agriculture
 
-Crop simulations in FEWCalc are from simulated data from DSSAT. Results from DSSAT were based on both historical weather data from 2008 to 2017 and statistically downscaled Global Climate Models (GCMs) data under RCP4.5 and RCP8.5. Users have to select one of the future processes under **Climate Scenario** section. There are 4 options including _(1) Repeat Historical, (2) Wetter Years, (3) Dryer Years, and (4) Impose T, P, & S Changes._ Climate Projection scenario is the only one option applying GCM data for the projection.
+## 1. Notes for Users
 
-**IRRIGATED FARMING**
-FEWCalc assumes that water for irrigation is all from groundwater. The model simulates irrigated farmland if the water is available and the aquifer thickness is not less than a minimum aquifer thickness defined by users.
+This section briefly notes some ways FEWture Farms could be useful to different audiences.  FEWture Farms was developed by a group of people with expertise in each of the component fields – food, energy, water, economics, and ammonia (a main component of the fertilizer mix) -- and can thus be used by people with expertise in a few or even none of these fields to learn something about the other fields.
 
-**DRYLAND FARMING**
-During the simulation, groundwater is being consumed to supply water through the system. When the aquifer thickness is below a minimum aquifer thickness, the model stops irrigating and then applies dryland farming in the system. During dryland farming, the groundwater level rises due to the recharge rate.
+FEWtures Farms is best thought of as a tool to introduce users to novel approaches. It is not a tool to plan a proposed endeavor in detail. Users are encouraged to seek advice from specialists before making major decisions about ways forward. 
 
-### Energy
-
-This recent version of FEWCalc assumes that installation cost spreads over 30 years. Users can define the number of solar panels and wind turbines in the interface under **Energy** section. A default wind turbine power is set at 2 megawatts.
-
-_EQUATIONS:_
-
->  * Solar production (MWh) = #solar panels * Capacity_S * average peak sun hours * Degrade_S * 365 days/yr
-  * Wind production (MWh) = #wind turbine * Capacity_W * capacity factor * Degrade_W * 8,760 hrs/yr
-  * Solar cost ($) = #solar panels * Capacity_S / 1000 * Cost_S / Nyear_S * (1 - ITC_S / 100)
-  * Wind cost ($) = #wind turbines * [(Capacity_W * Cost_W / Nyear_W) + O&M costs] * (1 - ITC_W / 100)
-  * Solar sell ($) = solar production * Energy_value
-  * Wind sell ($) = wind production * Energy_value
-
-Default values are in Appendix C.
-
-Contact: Bob Johnson (bobjohnson@centurylink.net), Earnie Lehman (earnielehman@gmail.com), and Hongyu Wu (hongyuwu@ksu.edu)
-
-### Water
-
-**SURFACE WATER**
-
-  * **Nitrogen Concentration in Surface Water**
-About 10% of applied nitrogen fertilizer remains in the soil during dry and moderate years until it is moved to surface-water bodies in wet years. The equation used are as follows.
-
-_EQUATIONS:_
-
-> N_field = 10% × N_applied × N_acres / 1.12	 -> _Accumulated until moved_
-  N_stream = ∑time (N_field) 	                 -> _Moved in wet or extremely wet years_
-
-**GROUNDWATER**
-
-  * **Water-level change versus water use:**
-[Whittemore et al (2016)](https://doi.org/10.1080/02626667.2014.959958) assessed the main drivers of water-level changes in the High Plain aquifer. They computed linear regression equations for correlation of mean annual water-level changes with reported water use during 1996-2012. They also evaluated the predicted response of the HPA and concluded that (1) water pumped for irrigation is the major driver of water-level changes. Besides, (2) a pumping reduction of 22% would stabilize the water level, and this could help extend the usable lifetime of the aquifer.
-  * **Groundwater depletion:** 
-FEWCalc employs a statistical method to determine the specific relationship between water-level change and water use for agriculture. A two-step process is used to calculate grounwater-level changes in this work (see section 2.5.2 in the article). Linear regression equations below were calculated based on historical data from 2008 to 2017 in Finney County, Kansas.
-
-_EQUATIONS:_
-
-> Step 1: **Reported gw use (ft)** = [0.114 * DSSAT water use (ft)] + 0.211
-  Step 2: Average annual water-level change (ft) = [-32.386 * **Reported gw use (ft)**] + 8.001
+FEWture Farms is presented using a text case based on data from 2008 to 2017 from Garden City, Kansas, USA. Crop prices and expenses were such that in many cases farming was a difficult endeavor in which to make money. With FEWture Farms, users can run scenarios to identify circumstances in which farmers can earn money from agricultural and energy production in the face of projected (to as late as 2097) water resource limitations, anticipated (as of 2021) changes in climate, and world agro-economic conditions. 
 
 
-Contact: Blake B. Wilson KGS (bwilson@kgs.ku.edu)
+### 1a. Farmers
 
-### Output displays
+The representation of farming concerns in FEWture Farms will likely seem too simple for most farmers. Hopefully there is enough realism in the agricultural component that the interplay with the water, energy, and economic components provide some insight into how future water constraints and energy opportunities might play a role in the future of a given farm or cooperative farm venture.
+
+### 1b. Teachers and Students
+
+FEWture Farms can be the basis of class exercises to help students understand the dynamics behind food on the table, water emerging from a faucet into a sink or bathtub, and electricity that seems to magically appear at any time of the day or night when a light switch is turned on. It can provide logistical and economic understanding of the energy, water, and agricultural infrastructure on the landscape to open the world up to students and, sometimes, their teachers. 
+
+### 1c. Everyone
+
+Food, Energy, water (FEW) systems are what we and our society depend on for our existence. Better understanding of these systems makes people better citizens and neighbors. 
+
+## 2. More About the Test Case Simulated
+
+It would be wonderful someday to have a tool like FEWture Farms that could automatically collect data for a user-chosen location and provide site specific results. That is not available in this version of FEWture Farms. For the example provided, one location was chosen, relevant data collected, and a simulation was constructed to create an interactive platform. This example forms a foundation for a program applicable to user chosen locations in that it suggests what kinds of data would need to be readily available for such applications, and provides program structure and some programming specifics likely to be useful in such a development. 
+
+The test case chosen includes a number of circumstances of broad interest. These include diminishing water supply, local renewable energy opportunities, and an agricultural system that dominates world markets for some crops and does not for other crops. The text case includes one example of government support  -- crop insurance that is active when crop productivity drops off due to loss of irrigation water supply.
+
+The test case represents the area around Garden City in Finney County, Kansas, USA. It is in the southern High Plains aquifer (HPA), where groundwater levels decreased dramatically between the 1960s and the 2020s, due mostly to very large-scale water pumping to irrigate crops. The water level declines have meant that in many areas irrigation has become impractical and only dryland farming is now possible (see first figure below). As shown in the figure, more land is expected to convert to dryland farming going forward. Farmers are diversifying their income sources as groundwater supplies are depleted and agricultural production is negatively impacted.
+
+Fortunately, Kansas is well positioned in the nation’s wind belt and local farmers have access to a robust renewable energy source (Anderson et al., 2012). Economically, Kansas is the second leading state in wind energy production, with almost 50% of the electricity sold in the state being met by wind in 2022 (https://windexchange.energy.gov/states/ks). 
+The data used for the text case is documented extensively in Phetheet (2021a, Appendices A, B, C, and D). The figures from this section and related updated figures are available from the Kansas Geological Survey (KGS) and National Renewable Energy Laboratory (NREL).
 
 
-## Start the simulation
-  1. Set model options (see "Initialize parameters")
-  2. Click **Setup**
-  3. Click **Go** to run the entire simulation or click **Go once** to advance the simulation one time step.
+## 3. FEWture Farms – Some Basics
 
-## References
+FEWture Farms is an extension of FEWCalc, the Food-Energy-Water Calculator assembled by Jirapat (Mos) Phetheet, a Master’s student who worked with Professor Mary C. Hill in the Department of Geology, University of Kansas. FEWCalc is documented and demonstrated in Phetheet et al. (2021a,b). 
 
-Anderson, A.C., Gibson, B., White, S.W., & Hagedorn, L. (2012). The Economic Benefis of Kansas Wind Energy. Retrieved from https://www.renewableenergylawinsider.com/wp-content/uploads/sites/165/2012/11/Kansas-Wind-Report.pdf
+### 3a. TechnoEconomic Structure
 
-Jones, J.W, Hoogenboom, G., Porter, C., Boote, K., Batchelor, W., Hunt, L., … Ritchie, J. (2003). The DSSAT cropping system model. European Journal of Agronomy, 18(3–4), 235–265. doi:10.1016/S1161-0301(02)00107-7.
+The FEWture Farms calculations are divided into two parts. 
+•	The first part consists of crop calculations using a crop model called Decision Support System for Agrotechnology Transfer (DSSAT) (Jones et al., 2003).
+•	 The other is conducted using NetLogo agent-based modeling software by Uri Wilensky, 1999. This includes the energy, nitrate, groundwater level, and economic calculations, using the crop production and water and fertilizer use calculated using DSSAT.
 
-Kansas Geological Survey (KGS). (2007). Estimated Usable Lifetime for the High Plains Aquifer in Kansas, available at: http://www.kgs.ku.edu/HighPlains/maps/index.shtml.
+### 3b. Repeat a Simulation
 
-National Renewable Energy Laboratory (NREL). (2011). United States – Annual Average Wind Speed at 80 m., available at: https://www.nrel.gov/gis/wind.html.
+If the Export button is clicked, the data for the current simulation is saved in a file called “netlogo-world-file.csv”, called the World File in this document. This file can be used to repeat that simulation in either Netlogo web or the Netlogo desktop application by first loading the model file and then from the file dropdown menu selecting import > import world and selecting the downloaded World File. 
 
-Whittemore, D.O., Butler, J.J., & Wilson, B.B. (2016). Assessing the major drivers of water-level declines: new insights into the future of heavily stressed aquifers. 
-Hydrological Sciences Journal, 61(1), 134-145. doi:10.1080/02626667.2014.959958.
+The same filename is used for each save. To avoid overwriting files for each simulation, rename the files as you save them. 
 
-Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo. Center for Connected Learning and Computer-Based Modeling, Northwestern University. Evanston, IL.
+### 3b. Simulation of Changing Conditions Over Time
 
-Wiser, R., & Bolinger, M. (2019). 2018 Wind Technologies Market Report. U.S. Department of Energy. Retrieved from https://emp.lbl.gov/sites/default/files/wtmr_final_for_posting_8-9-19.pdf
+If things change going forward (as they surely will) FEWture Farms can be used to represent known or hypothesized changes as follows. To investigate effects of postulated changes, users can run one year at a time using the button Go Once at the top near the Go button. User-defined values can be changed after some number of years and the user can click the Go Once button to continue year by year. Alternatively, at any point the Go button can be clicked to proceed to the end of the defined time period. 
+
+The export button preserves settings as they are at the end of a simulation. The World File will not include previous changes. Thus, FEWture Farms model runs with changing year-to-year conditions cannot be repeated using the method as defined here.
+
+
+## Data
+
+The data used in this program is hard coded, user controlled, or used to convert units. These data types are described in the following sections. For additional information, see Phetheet (2021a,b).
+
+### 4a. User Controlled Input Data
+
+ FEWture Farms allows users to specify parameters for their own simulation in the NetLogo interface. It is designed to let users control those numbers easily by using boxes, sliders, and dropdown menus. These are located on the left of the model page on the FEWture Farms web site. The parameter names are mostly self-explanatory. Additional information is described in the list below. 
+
+•	Simulation_period: A period of simulation, in number of years. Up to 90 years is supported. In any simulation, the first 10 years use historical data (2008-2017), subsequent years apply Future Process (see below). In the graphs, the year on the horizontal axis represents a sequential year. Year 1 is 2008, year 60 is 2067 (the default simulation), and year 90 is 2097 (the latest possible end year). No adjustments for inflation are made over the simulation period.
+•	Agriculture 
+•	Corn-area, Wheat-area, Soybean-area and Milo-area: Total area of corn, wheat, soybeans and milo (grain sorghum), in acres. 
+•	Energy 
+•	Energy_value: Energy buyback rate.
+•	For solar energy
+•	#Panel_sets: Number of solar panel set (one set is 1000 panels). 
+•	Capacity_S: Installed PV capacity, for each panel.
+•	Nyear_S: Solar panel lifespan. 
+•	Degrade_S: Annual degradation rate. 
+•	Cost_S: Solar panel capital costs. 
+•	ITC_S: Investment Tax Credit for solar. 
+•	PTC_S: Production Tax Credit for solar. 
+•	For Wind energy
+•	#Wind_turbines: Number of wind turbines. 
+•	Capacity_W: Installed wind capacity for each turbine. 
+•	Nyear_W: Wind turbine lifespan. 
+•	Degrade_W: Annual degradation rate. 
+•	Cost_W: Wind turbine capital costs. 
+•	ITC_W: Investment Tax Credit for wind. 
+•	PTC_W: Production Tax Credit for wind. 
+•	Water 
+•	Aquifer_thickness: Saturated thickness of the aquifer. 
+•	Min_Aq_Thickness: Minimum available aquifer thickness. 
+•	Future_Process: A drop-down menu of future process. Future process will be activated automatically after year 10 using historical data from 2008 to 2017 and GCM data (2018-2098). 
+•	Repeat Historical: Ten-year DSSAT results are repeated consecutively. 
+•	Wetter Years: A future that is wetter than historical period. 
+•	Dryer Years: A future that is drier than historical period. 
+•	Impose P, T, & S: A future involved climate change model (GCM) results. 
+•	Climate_Model: RCP4.5 or RCP8.5 (4.5 assumes a lower carbon, less hot future than does 8.5)
+
+### 4b. “Hard Coded” Input data 
+
+Some input data in this model is “hard-coded,” meaning that the user cannot change these input values. These values correspond to eight input files in comma-separated values (.csv) format available for reference on the FEWture_Farms Github repository (https://github.com/KUIPSR/FEWture_Farms/tree/main) in the “netlogo” folder. The desktop app, also available on the FEWture_Farms Github repository, can run these and user-created custom input files. Details can be found in the model notes associated with that file. The adapted model file, which is compatible with Netlogo Web, is available in that repository within the “NetlogoWeb” folder.
+
+Some hard-coded Input values (e.g., projected precipitation and crop prices for the Future_Process options Repeat Historical, Dryer and Wetter) were taken from historical data between 2008 and 2017. Others were calculated from DSSAT (e.g., yield and irrigation) using the same dataset (numbered 1-4 as shown below) and global climate models (GCMs) (5-8 below). The input files relate to the four major crop types in Kansas: corn, wheat, soybean, and milo (grain sorghum). 
+
+•	1_Corn_inputs.csv , 2_Wheat_inputs.csv , 3_Soybean_inputs.csv , 4_Milo_inputs.csv 
+•	5_Corn_GCMs.csv , 6_Wheat_GCMs.csv , 7_Soybean_GCMs.csv , 8_Milo_GCMs.csv 
+The file columns headers are not well-defined. Here is a detailed explanation of those values. 
+•	Year: simulation year. (0, 1, 2, …)
+•	Precip (in): historical precipitation, in inches. 
+•	Price ($/bu): historical crop price for 2008-2017, in US$/bushel in 2008-2017 values. 
+•	Yield_1 (bu/ac): simulated yield from irrigated farming using historical data. 
+•	Irrig_1 (in): simulated irrigation from irrigated farming using historical data. 
+•	Yield_2 (bu/ac): simulated yield from dryland farming using historical data. 
+•	Irrig_2 (in): simulated irrigation from dryland farming using historical data. Values = zero. 
+•	N-app (kg/ha): Nitrogen fertilizer rate (kilograms per hectare; units from DSSAT) 
+The next columns list precipitation, crop yield and irrigation for RCP8.5 and 4.5.
+•	RCP8.5
+•	Precip8.5 (in): Precipitation projection average for 20 GCM models
+•	The following are averaged over DSSAT simulations of 20 GCM model precipitation, temperature and solar radiation projections.
+•	Yield_3 (bu/ac): simulated yield from irrigated farming
+•	Irrig_3 (in): simulated irrigation from irrigated farming. 
+•	Yield_4 (bu/ac): simulated yield from dryland farming. 
+•	Irrig_4 (in): simulated irrigation from dryland farming. 
+•	RCP4.5
+•	Precip4.5 (in): Precipitation projection under PRPCP4.5 
+•	The following are averaged over DSSAT simulations of 20 GCM model precipitation, temperature and solar radiation projections.
+•	Yield_5 (bu/ac): simulated yield from irrigated farming 
+•	Irrig_5 (in): simulated irrigation from irrigated farming. 
+•	Yield_6 (bu/ac): simulated yield from dryland farming 
+•	Irrig_6 (in): simulated irrigation from dryland farming 
+The units used are as follows.
+•	Unit explanation: in is inch, $ is US dollar (Not adjusted for inflation), bu is bushel, and ac is acre. 
+
+### 4c. Unit Conversions
+
+•	1 bushel corn or milo per acre = 62.77 kilograms per hectare 
+•	1 bushel wheat or soybean per acre = 67.25 kilograms per hectare 
+•	1 acre = 0.4047 hectares
+
+## 5. Model Function 
+
+FEWture Farms calculations are conducted for agriculture, energy, water, and economics. A note about ammonia, an important part of fertilizer and a significant expense to farmers, is also included.
+
+### 5a. Agriculture
+
+Crop production for four crops used in FEWture Farms are simulated by the DSSAT model. Crop production values from DSSAT are based on several types of data, including weather data. The weather data are temperature, precipitation, and solar irradiance. 
+
+The historical period of the FEWture Farms simulation (from 2008 to 2017) uses measured weathered data from those 10 years. The simulated crop production for those years was compared to measured values as reported in Phetheet et al (2021a). 
+
+The simulated projections start in 2018 and continue for up to 90 years, as defined by the user. For these years, the weather data needed by DSSAT is obtained from repeating the 10years of measured data results to create a future that is an exact repetition of 10 measured years, consists of more wet or dry years than the past 10 measured years, or uses statistically downscaled Global Climate Models (GCMs). 
+
+GCMs can be run under different Representative Concentration Pathways (RCPs), which differ in assumptions about how society evolves going forward. The two options included in FEWture Farms are RCP4.5 and RCP8.5. RCP8.5 is consistent with societal evolution that continues to depend on fossil fuels as a dominant energy source. RCP4.5 is consistent with societal evolution that depends on fossil fuels less. As of this writing in 2025, global temperature increases have been more consistent with RCP8.5 that RCP 4.5.
+
+Users select one of the future processes under Climate Scenario section. There are 4 options: (1) Repeat Historical, (2) Wetter Years, (3) Dryer Years, and (4) Impose T, P, & S Changes. Choosing Climate Projection enables the user to used the GCM projections for RCP4.5 or RCP8.5. For the Repeat Historical option, the same 10-year sequence is repeated unless groundwater levels decline below the user-defined minimum. At that point, dryland farming is simulated. Dryland farming means that the crop yield will tent to be less, but costs of irrigation decline. Economic costs are discussed briefly below.
+
+Irrigated Farming
+
+FEWture Farms assumes that water for irrigation is all from groundwater. The model simulates irrigated farmland if the water is available and the aquifer thickness is not less than a minimum aquifer thickness defined by users. 
+
+Dryland Farming
+
+During the simulation, groundwater is consumed to supply water through the system. When the aquifer thickness is below a minimum aquifer thickness, the model stops irrigating and then applies dryland farming in the system. During dryland farming, the groundwater level rises due to the recharge rate and irrigated farming may resume once the water level has recovered enough. 
+
+### 5b. Energy 
+
+The FEWture Farms interface allows users to define the length of time that installation cost is spread over. The default is 30 years. Users can also define the number of solar panels and wind turbines in the interface under the Energy section. The default wind turbine power is set at 2 megawatts and can be adjusted by the user. 
+
+Equations: 
+
+The variable names introduced in the section Input Data -- User Controlled are used where applicable. Otherwise, short phases are used to describe the quantity involved.
+
+•	Solar production (MWh) = #solar panels * Capacity_S * average peak sun hours * Degrade_S * 365 days/yr 
+•	Wind production (MWh) = #wind turbine * Capacity_W * capacity factor * Degrade_W * 8,760 hrs/yr 
+•	Solar cost ($) = #solar panels * Capacity_S / 1000 * Cost_S / Nyear_S * (1 - ITC_S / 100) 
+•	Wind cost ($) = #wind turbines * [(Capacity_W * Cost_W / Nyear_W) + O&M costs] * (1 - ITC_W / 100) 
+•	Solar sell ($) = solar production * Energy_value 
+•	Wind sell ($) = wind production * Energy_value 
+Default values are in Appendix C of Phetheet et al (2021a). For more information see Phetheet (2021a,b).
+
+### 5c. Water 
+
+All irrigation water is derived from groundwater in the simulation. Fertilizer is applied to crops; part of the nitrate is used by plants and some tends to be retained in the soil and eventually washes away into streams during wet periods. Literature values are used estimated the resulting nitrate load to streams. Nitrate in the water system is important due to potential adverse health consequences.
+
+Surface Water
+ 
+Nitrogen Concentration contributions to Surface Water are estimated based on literature estimates. About 10% of applied nitrogen fertilizer remains in the soil during dry and moderate years until it is moved to surface-water bodies in wet years. See Phetheet et al. (2021a, App. C) for additional information. 
+
+Equations: 
+
+N_field = 10% × N_applied × N_acres / 1.12 -> Accumulated until moved
+
+N_stream = ∑time (N_field) -> Moved in wet or extremely wet years 
+
+Groundwater 
+
+Water-level changes annually have been found to be closely correlated to annual use. Whittemore et al (2016) computed linear regression equations for correlation of mean annual water-level changes with reported water use during 1996-2012. They also evaluated the predicted response of the HPA and concluded that (1) water pumped for irrigation is the major driver of water-level changes and (2) a pumping reduction of 22% would stabilize the water level, and this could help extend the usable lifetime of the aquifer. 
+FEWture Farms employs a statistical method to calculate water-level change given values of water use for agriculture from DSSAT. A two-step process is used to calculate groundwater-level changes in this work (see section 2.5.2 in Phetheet et al. 2021a). One relates DSSAT calculated annual water use to regional reported annual water use. The second relates regional reported annual water use to annual water level changes. The linear regression equations below were calculated based on historical data from 2008 to 2017 in Finney County, Kansas and the regional area evaluated by Whittemore et al (2016). 
+Equations: 
+
+Step 1: Reported gw use (ft) = [0.114 * DSSAT water use (ft)] + 0.211
+Step 2: Average annual water-level change (ft) = [-32.386 * Reported gw use (ft)] + 8.001 
+For more information see Phetheet et al (2021a,b)
+
+### 5d. Economics 
+
+The crop prices and expenses simulated are described in Phetheet (2021a). FEWture Farms does not apply an inflation factor. For the net income trends, the underlying assumption is that the inflation rate for the income and expenses is the same. Clearly time will affect the income and expense numbers in ways not presently foreseen. The FEWture Farms program could provide a foundation for a program able to simulate theoretical scenarios of changing income and expense scenarios.
+
+Here, the methods used in FEWture Farms are discussed briefly related to two issues – how crop prices are affected by how dominant this geographic area is in the global pricing of the four crops, and the cost of ammonia used in FEWture Farms relative to historical pricing.
+
+Crop Prices and Crop Dominance Globally
+
+For some crops, like corn and grain sorghum, low crop productivity in the area considered means higher prices for those crops globally. That is, when production is down, price will tend to be high. In this situation, farmers can do quite well financially even in years with low productivity. This is reflected in some simulated results. 
+
+For other crops, such as soybeans and wheat, no such dominance exists as of the timeframe of this model construction, so crop prices tend to vary independently of local production. This means that financially these crops can have some very bad years. Again, this is sometimes reflected in some simulated results.
+
+### 5e. Fertilizer -- Ammonia Costs and an Alternative
+
+Fertilizer provides nitrogen to plants and makes them grow larger faster. Fertilizer is responsible for about 40% of agricultural production worldwide. The presence of synthetic fertilizer in the food supply can be measured using the nitrogen isotopes in people. On average, about 40% of the nitrogen in people’s bodies are isotopically consistent with synthetic fertilizer. (Bird et al. 2021)
+ 
+Ammonia is a major component of fertilizer used in crop production. The remainder of this section will focus on ammonia because it is a large part of the mix of fertilizers that tend to be used in agriculture. 
+
+The subsections below first present some brief historical information about ammonia prices. The price of ammonia in the FEWture Farms scenarios is static, and this section provides a background for how in error that may be. This is followed by a description of how the effect of an alternate fertilizer price on farm income might be estimated on FEWture Farms results. Finally, the finances of a new option of farms producing their own green ammonia locally using local renewable energy sources is presented. The analysis is provided in an Excel file. Use of results from the Excel file are discussed.
+
+A Brief History of Ammonia Prices
+
+The price of ammonia has varied substantially over time in recent years. It has historically nearly all been produced using fossil fuels as represented by natural gas. The price of ammonia historically varied pretty much in step with natural gas costs, but in the last decade or so has sometimes been priced above what might have been expected based on natural gas prices.
+
+For example, in 2022 the price of ammonia ranged from $200/tonne in January and was as high as $1600/tonne in August. Obviously, this was a difficult situation for farmers. As of this writing, in June 2025, the cost of ammonia is about $680/tonne. 
+
+This version of FEWture Farms does not calculate the effects of a variable cost for ammonia. The ammonia costs used in FEWture Farms are not based on the fertilizer use calculated by DSSAT. Instead, the cost of fertilizer is set to a general estimate of quantity of fertilizer per acre times cost/tonne for each crop type as provided by Ibendahl et al. (2020) , as discussed by Phetheet et al. (2021a, table A.7). This is multiplied by the number of acres of that crop planted.
+
+Accounting for Alternative Costs of Ammonia
+
+The effect of a different ammonia price can be approximated by adjusted values produced by FEWture Farms, as follows. 
+
+•	Calculate New Cost per tonne minus Old Cost per tonne (from Ibendahl). 
+•	Multiply by the number of tonnes per acre for each crop to get one number for each crop. 
+•	Multiply each number by the number of acres for the associated crop. 
+•	If the number is positive, subtract it from the farm net income for agriculture, and the farm total net income.
+•	If the number is negative, add it to the farm net income for agriculture and the farm total net income.
+
+In doing this calculation you will be able to see that the added cost of ammonia can be significant relative to the net income calculated by FEWture Farms. You can see that the high prices for ammonia discussed in the brief price history section can be devastating to farmers and motivate them to change farming practices. For example, they might leave more land unplanted in a year with very high ammonia prices.
+
+Considering Local Green Ammonia
+
+As an alternative to purchasing ammonia for fertilizer, the option now exists for farmers to produce their own ammonia locally. When this technology is powered by renewable energy such as wind or solar, the product is called green ammonia. 
+
+Green ammonia is functionally the same product but instead of the needed hydrogen coming from natural gas, it comes from water. The amount of water needed is small – generally less than 0.1% of the water needed to irrigate the crop involved. (Pfromm 2025). 
+
+An excel file that can be used to calculate green ammonia operating and capital costs, and cashflow over a defined time period was developed as part of the FEWtures project and is available at: 
+
+https://ksdata.ku.edu/FEWtures/FEWtureFarms/GreenAmmoniaProductionToolv2_2.xlsm
+
+Clicking this link allows users to download the Excel file. Users will need to open the file and proceed with the following instructions.
+
+First, you will need Excel on your computer.
+
+Save the downloaded file. Click (or double click depending on your computer settings) on it to start Excel. When the Excel file is opened, click the button to enable macros. As a macro-enabled Excel file, and it may be blocked by security settings on your system. Contact your system administrator if you experience any problems. Testing was conducted using a Windows OS.
+
+When the menu about “Enter Data” pops up, choose the right-hand button labeled “Exit Data Entry”. This will produce a starting point that provides a positive cash flow by year 20. It differs from the starting point produced when the “Enter Data” is chosen in that the discount rate is set to 0.05 instead of 0.15, and the price of ammonia is set to $1100/tonne instead of $1000.
+
+The sheet of the Excel file titled “Discounted cash flow” will be most useful for users. It provides the opportunity to define selected characteristics of a local green ammonia installation (like the assumed price of ammonia and discount rate). This sheet also includes a graph of cumulative discounted cash flow over a defined period of time. A larger version of the graph is provided in the preceding sheet, entitled “Output Graph”.
+Having the ability to produce ammonia means the farm no longer needs to pay for ammonia at market rates. However, it does need to pay for the facility. The discounted case flow exceeding zero means that the avoided payments for ammonia have paid off the equipment at that point in time. The farm will continue needing to pay for maintenance and, eventually, equipment replacement. Overall, the farm has gained ammonia price stability and might make money on the investment.
+
+## 6. Selected Topics for Running FEWture Farms
+
+Here, two issues are addressed: the steps for starting a simulation and how to export input and output from a model run.
+
+### 6a. Start the Simulation 
+
+1.	Set model options (see “Initialize parameters”) 
+2.	Click Setup 
+3.	Click Go to run the entire simulation or click Go once to advance the simulation one time step. 
+
+### 6b. Export Data
+
+The “Export data” button below the model illustration allows users to export both model inputs and result graphs. 
+
+The model inputs are downloaded to a file named , which can be used to repeat the simulation in Netlogo web or on the desktop version (although not in the web page at ksdata.ku.edu).
+
+The results specific to each graph will be downloaded as separate csv files. The first 30 or so lines of these files can be ignored. The remaining lines contain x and y values corresponding to the graphical outputs in the web interface (x being years, starting at year 0 of the simulation so that the sequence goes to 59 for a 60 year simulation) along with color values from the graph and a “pen down” variable that denotes whether that point appears on the graph. The names of these files are described in the following section.
+
+### 6c. Filenames for Result Graphs
+
+Eight exported files correspond to the eight plots produced in the model interface. This allows results from each saved simulation to be easily identified. The filenames are as follows, in alphabetical order. To retain files from a given run, users are encouraged to copy files into a directory named for and dedicated to that model run.
+
+•	“ag-net-income.csv”
+•	“crop-production.csv"
+•	"crop-groundwater-irrigation.csv"
+•	"farm-energy-production.csv"
+•	"total-net-income.csv"
+•	"energy-net-income.csv"
+•	"groundwater-level.csv"
+•	"income-from-crop-insurance.csv"
+
+## 7. Model Version
+
+This version of the FEWture Farms model requires Netlogo version 6.1.0 or higher to run on desktop.
+
+## 8. References Cited
+
+References cited in this text are listed here. These and additional references related to the NSF FEWtures project can be found in a graphical display located at: https://ksdata.ku.edu/FEWtures/FEWtureFarms/ Click “Publication” in the ribbon above the FEWture Farms model.
+
+Anderson, A.C., Gibson, B., White, S.W., & Hagedorn, L. (2012). The Economic Benefits of Kansas Wind Energy. Retrieved from https://www.renewableenergylawinsider.com/wp-content/uploads/sites/165/2012/11/Kansas-Wind-Report.pdf 
+
+Bird, M.I., Crabtree, S. A., Haig, J., Ulm, S., Wurster, C.M., 2021. A global carbon and nitrogen isotope perspective on modern and ancient human diet. Proc. Natl. Acad. Sci.118(19):e2024642118. DOI 10.1073/pnas.2024642118.
+
+Ibendahl, G., O’Brien, D., Haag, L., & Holman, J. (2020). Farm Management Guides. https://www.agmanager.info/farm-management-guides-0. 
+
+Jones, J.W, Hoogenboom, G., Porter, C., Boote, K., Batchelor, W., Hunt, L., … Ritchie, J. (2003). The DSSAT cropping system model. European Journal of Agronomy, 18(3–4), 235–265. doi:10.1016/S1161-0301(02)00107-7. 
+
+Kansas Geological Survey (KGS). (2007). Estimated Usable Lifetime for the High Plains Aquifer in Kansas, available at: http://www.kgs.ku.edu/HighPlains/maps/index.shtml. 
+National Renewable Energy Laboratory (NREL). (2011). United States – Annual Average Wind Speed at 80 m., available at: https://www.nrel.gov/gis/wind.html. 
+
+Phetheet, J., M. C. Hill, R. W. Barron, B. J. Gray, H. Wu, V. Amanor-Boadu, W. Heger, I. Kisekka, B. Golden and M. W. Rossi (2021a). Relating agriculture, energy, and water decisions to farm incomes and climate projections using two freeware programs, FEWCalc and DSSAT. Agricultural Systems 193. doi: 10.1016/j.agsy.2021.103222.
+
+Phetheet, J., M. C. Hill, R. W. Barron, M. W. Rossi, V. Amanor-Boadu, H. Wu and I. Kisekka (2021b). "Consequences of climate change on food-energy-water systems in arid regions without agricultural adaptation, analyzed using FEWCalc and DSSAT." Resources, Conservation and Recycling 168. Doi: 10.1016/j.resconrec.2020.105309.
+
+Pfromm, Peter, James Bloodgood, Mary C Hill (2025) The water demand of ammonia production to fertilize crops. https://kuscholarworks.ku.edu/server/api/core/bitstreams/06927912-f9f6-4257-bdaa-c54c103ed472/content
+
+Whittemore, D.O., Butler, J.J., & Wilson, B.B. (2016). Assessing the major drivers of water-level declines: new insights into the future of heavily stressed aquifers.
+Hydrological Sciences Journal, 61(1), 134-145. doi:10.1080/02626667.2014.959958. 
 @#$#@#$#@
 default
 true
@@ -3706,15 +3914,15 @@ NetLogo 6.4.0
 @#$#@#$#@
 @#$#@#$#@
 default
-0
--0.2 0 0 1
-0 1 1 0
-0.2 0 0 1
+0.0
+-0.2 0 0.0 1.0
+0.0 1 1.0 0.0
+0.2 0 0.0 1.0
 link direction
 true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
 @#$#@#$#@
-
+0
 @#$#@#$#@
